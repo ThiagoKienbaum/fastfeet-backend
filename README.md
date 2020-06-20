@@ -14,17 +14,24 @@
 
 > This project is a backend API REST, develop to be a transport company app.
 
-## Technologies used on this project
-- JavaScript
-- NodeJS
-- Express
-- Docker
-- Postgres
-- EsLint / Prettier
-- JWT (Json Web Token)
-- Bcrypt
-- API REST
-
+## Built with
+* JavaScript
+* NodeJS
+    - Express
+    - JWT (Json Web Token)
+    - Bcrypt
+    - Nodemon
+    - API REST
+* Code quality
+    - EsLint
+    - Prettier
+* Database
+    - Docker
+    - PostgreSQL
+    - Sequelize
+* Design pattern
+    - MVC
+    
 
 ## Meta
 
