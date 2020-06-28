@@ -6,11 +6,11 @@ class RecipientsController {
         const schema = Yup.object().shape({
             name: Yup.string().required(),
             street: Yup.string().required(),
-            number: Yup.integer().required(),
+            number: Yup.number().required(),
             complement: Yup.string(),
             city: Yup.string().required(),
-            state: Yup.string().min(2).max(2).required(),
-            zip_code: Yup.number().min(8).max(8).required(),
+            state: Yup.string().required(),
+            zip_code: Yup.number().required(),
         });
 
         if(!(await schema.isValid(req.body))) {
@@ -32,21 +32,21 @@ class RecipientsController {
 
     async update(req, res) {
         const schema = Yup.object().shape({
-            id: Yup.integer().required(),
+            id: Yup.number().required(),
             name: Yup.string().required(),
             street: Yup.string().required(),
-            number: Yup.integer().required(),
+            number: Yup.number().required(),
             complement: Yup.string(),
             city: Yup.string().required(),
-            state: Yup.string().min(2).max(2).required(),
-            zip_code: Yup.number().min(8).max(8).required(),
+            state: Yup.string().required(),
+            zip_code: Yup.number().required(),
         });
 
         if(!(await schema.isValid(req.body))) {
             return res.status(400).json({ error: 'Validation fails' });
         }
-
-        const recipient = await Recipients.findByPk(req.id)
+        
+        const recipient = await Recipients.findByPk(req.body.id)
 
         if (!recipient) {
             res.status(400).json({ error: 'Recipient does not exists' })
