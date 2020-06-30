@@ -46,13 +46,13 @@ class RecipientsController {
             return res.status(400).json({ error: 'Validation fails' });
         }
         
-        const recipient = await Recipients.findByPk(req.body.id)
+        const recipient = await Recipients.findByPk(req.body.id)        
 
         if (!recipient) {
             res.status(400).json({ error: 'Recipient does not exists' })
         }
         
-        const {id, name, street, number, complement, city, state, zip_code } = await Recipients.update(req.body);
+        const { id, name, street, number, complement, city, state, zip_code } = await recipient.update(req.body);
         return res.json({
             id,
             name,
