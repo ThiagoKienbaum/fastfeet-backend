@@ -18,27 +18,22 @@
 * JavaScript
 * NodeJS
     - Express
+    - Multer
     - JWT (Json Web Token)
     - Bcrypt
     - Nodemon
     - API REST
 * Code quality
     - EsLint
-<<<<<<< HEAD
-=======
     - Prettier
->>>>>>> f0fb34805382c8b3aa07f68ba1bd1bf80aa4d371
 * Database
     - Docker
     - PostgreSQL
     - Sequelize
 * Design pattern
     - MVC
-<<<<<<< HEAD
 
-=======
     
->>>>>>> f0fb34805382c8b3aa07f68ba1bd1bf80aa4d371
 
 ## Meta
 
